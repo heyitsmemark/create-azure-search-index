@@ -43,7 +43,7 @@ if test "$DEFINITION_IS_LOCAL" = true; then
     exit 1
   fi
 else
-  DEFINITION=$(curl --silent $DEFINITION_LOCATION)
+  DEFINITION=$(curl -f --silent $DEFINITION_LOCATION)
   if test "$?" != "0"; then
     echo "the curl command failed with: $?"
     exit 1
